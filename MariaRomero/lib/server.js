@@ -5,7 +5,7 @@ const server = net.createServer(function(socket){
   var writeFile = fs.createWriteStream(__dirname + '/../textfiles/' + Date() + '.txt');
   socket.pipe(writeFile);
   socket.on('data', function(){
-    socket.end();
+    socket.end(); 
   })
 
 }).listen(3000, function(){
